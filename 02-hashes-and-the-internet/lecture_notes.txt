@@ -1,0 +1,90 @@
+what happens when I go to this website?
+
+go to https://pointerpointer.com/
+
+go to https://www.reddit.com/r/awww
+
+go to https://www.reddit.com/r/awww/.json
+
+this .json page is the data behind the non json page
+* Show the difference between them
+* Show how they are related
+* Mention what json is and that it looks like a hash
+* talk about chrome extension
+
+What does JSON look like?
+
+a web browser is just a client to access this information.
+It's some software that someone wrote, Like excel, to use this data and interact with it.
+
+We are going to go from a web browser client (Chrome)
+to our own client that is written in ruby and we are going to make it ourselves
+Because, we are programmers
+
+check out our gems (rest-client gem github)
+check out how to use rest-client (get request)
+
+
+talk through install gems
+
+explore rest-client with https://www.reddit.com/r/awww/.json URL
+
+show response of rest client
+show .class of rest client
+
+check out response.body
+
+
+talk about json gem
+
+google json ruby gem github
+
+pass the response.body into JSON.parse()
+
+this is an api (reddit.json is, for example)
+
+an api is an application programmable interface
+
+does anyone want to take a stab at what that means?
+
+talk about & quickly show Starwars API (https://swapi.co/)
+
+Talk about google books api
+
+Build google books api app.
+* ask user to get information they want to search for
+* Make a request to google books API
+* display all the book results that come back but only:
+  * Show title
+  * Show Desc
+  * Show Author
+
+
+
+  Search for "clowns"
+
+  Search for "hotdog water"
+
+Use JSON.parse
+
+lets look at one book
+
+lets pull out the info in that one book
+
+lets loop through all the books
+
+lets decorate them
+
+use pry
+
+check out things using .class
+check out things using .methods
+check out things using .keys
+check out things using .values
+look at the .json url from the browser
+
+go through errors with .join
+do some error handling for books with no authors
+
+
+QUESTIONS??
