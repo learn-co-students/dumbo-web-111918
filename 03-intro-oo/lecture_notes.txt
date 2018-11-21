@@ -1,0 +1,97 @@
+
+look at clown_joke
+- look at class
+- talk about methods on objects
+- (use split(), send(:split))
+
+# What is split? what is send? It's a message!
+# send says, send this message to this object
+# when this object recieves this message,
+# try to call a method named split
+
+
+# go through an array of clown names
+# in an array (check out names.class & looks at .methods .join()
+# names.send(:join) names.send(:join, "---"))
+
+
+# start by going through hashes, lots of hashes,
+# showing what happens with accessing keys and
+# write a method "say hi, #{clown name}"
+# ISSUES:
+# - if something has a typo
+# - repeating code
+# - doesn't help you think in objects (like "real world" items)
+# - doesn't help you keep data and behavior (methods) together
+
+
+# time to create a blueprint for a clown (Class making time!)
+
+# use pry, make some clowns!
+# class Clown
+#
+# end
+
+# look at Clown in terminal
+# create a Clown.new
+# Explain what .new does
+# check out Dog.new.object_id?
+
+# A clown can have attributes
+
+# class Clown
+#   # setter
+#   def name=(name)
+#     @name
+#   end
+#   # getter
+#   def name
+#     @name
+#   end
+#
+# end
+
+# Go into pry, set .name & get .name
+
+# Build out age
+# Go into pry, set .age & get .age
+
+
+# Talk about initialize
+
+# class clown
+#   def initialize(name, age)
+#     @name = name
+#     @age = age
+#   end
+# end
+
+# run Clown.new, get argument error
+# try to access .name or .age, show error
+
+Set up attr_reader :name, :age
+
+try to set .name or .age, show error
+Set up attr_writer :name, :age
+
+add :skill & fear to initialize & to attr_reader and attr_writer
+
+talk about attr_accessor :name, :age, :skill, :fear
+
+? what if we never want to change name or age,
+but want to change and read skill and fear?
+
+set up an instance variable @nickname = @skill[0..2]
+and be able to read and write it
+- try to access it first without attr_accessor
+
+# A clown has behavior
+- build out the "say_hi" method
+- try it out
+- try with clown_instance.send(:say_hi)
+
+- build out the "perform" method
+- try it out
+
+- build out the "tell_secret" method
+- try it out
