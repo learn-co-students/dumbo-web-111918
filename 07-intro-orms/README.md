@@ -50,3 +50,33 @@ id    |    name
 1         "Sandi Metz"
 2         "Julissa"
 ```
+
+
+### CRUD relationships sql vs ruby
+
+## Create
+- `INSERT INTO book (title) VALUES ("POODR 2");`
+- `book = Book.new("POODR 2")`
+- `book.save`
+- `Book.create("POODR 2")`
+
+## Read
+- `SELECT * FROM books;`
+- `Book.all`
+
+- `SELECT * FROM books WHERE id = 1;`
+- `Book.find(1)`
+- `Book.find_by_id(1)`
+
+- `SELECT * FROM books WHERE title = "POODR";`
+- `Book.find_by_title("POODR")`
+
+## Update
+- `UPDATE books SET (title) VALUES ("I'm REALLY amazing!") WHERE id = 3;`
+- `book = Book.find(3)`
+- `book.update_title("I'm REALLY amazing!")`
+
+## Destroy
+- `DELETE books WHERE id = 3;`
+- `book = Book.find(3)`
+- `book.destroy`
