@@ -1,5 +1,5 @@
 class Trainer < ActiveRecord::Base
-  #select all the Pokeballs where the ID matches the one we're looking for
+  #these macros build out the relationships for us
   has_many :poke_balls
   has_many :pokemons, through: :poke_balls
 
