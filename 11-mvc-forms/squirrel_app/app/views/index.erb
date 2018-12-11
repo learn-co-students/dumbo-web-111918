@@ -1,0 +1,13 @@
+<marquee><%= @squirrel_emoji * 10 %></marquee>
+<h1>Here are all of our squirrels</h1>
+
+<form>
+  <input type="text" name="q" value="<%= @query %>">
+  <input type="submit">
+</form>
+
+<ul>
+<% @squirrels.each do |squirrel| %>
+<li><%= squirrel.name %></li>
+<% end %>
+</ul>
