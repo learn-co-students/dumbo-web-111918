@@ -14,14 +14,14 @@
 * Build out CRUD using Sinatra
 
 # RESTful CRUD
-* Reading
-* New
-* Creating
-  * Form
-  * mass assignment
+* Reading ✅
+* New ✅
+* Creating ✅
+  * Form ✅
+  * mass assignment ✅❓
 * Edit form
 * Updating
-  * one small caveat
+  * one small caveat (`"_method"`?)
 * Deleting
 
 ## If we have time
