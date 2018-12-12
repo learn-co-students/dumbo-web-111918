@@ -1,0 +1,14 @@
+<h1>This is the list of students</h1>
+<!-- Write Ruby -->
+<!-- Generally enumerable -->
+<ul>
+
+  <% @students.each do |student| %>
+    <li>
+      <!-- Show information -->
+      <%= "#{student.name} is cool" %>
+    </li>
+
+  <% end %>
+  
+</ul>
