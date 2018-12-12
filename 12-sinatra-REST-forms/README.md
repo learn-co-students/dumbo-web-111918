@@ -18,10 +18,11 @@
 * New ✅
 * Creating ✅
   * Form ✅
-  * mass assignment ✅❓
+  * Mass assignment ✅❓
 * Edit form
+  * Nested params
 * Updating
-  * one small caveat (`"_method"`?)
+  * One small caveat (`"_method"`?)
 * Deleting
 
 ## If we have time
