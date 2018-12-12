@@ -9,16 +9,16 @@
   Read
 
   Update
-  
+
   Delete
 * Build out CRUD using Sinatra
 
 # RESTful CRUD
-* Reading ✅
-* New ✅
-* Creating ✅
+* Reading ✅  - GET /students (index page) & GET /students/:id (show page)
+* New ✅ - GET /students/new (gets.chomp)
+* Creating ✅  - POST /students
   * Form ✅
-  * Mass assignment ✅❓
+  * Mass assignment ✅❓ - params
 * Edit form
   * Nested params
 * Updating
@@ -27,3 +27,5 @@
 
 ## If we have time
 * Refactoring
+  * helper methods
+  * partials
