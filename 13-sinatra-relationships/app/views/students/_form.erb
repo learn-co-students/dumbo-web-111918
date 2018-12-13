@@ -13,6 +13,18 @@
   </li>
   <li>
     Favorite Food:
-    <input type="text" name="student[favorite_food]" value="<%= @student.favorite_food %>">
+    <!-- <input type="text" name="student[food_id]" value="<%= @student.food_id %>"> -->
+    <select name="student[food_id]">
+      <% Food.all.each do |food| %>
+        <option <%= food.id == @student.food_id ? "selected" : "" %> value="<%= food.id %>"><%= food.name %></option>
+      <% end %>
+    </select>
   </li>
+
+
+
+
+
+
+
 </ul>

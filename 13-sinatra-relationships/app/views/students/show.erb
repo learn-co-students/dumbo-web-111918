@@ -6,7 +6,7 @@
   Their age is <%= @student.age %>
 </p>
 <p>
-  Their favorite food is <%= @student.favorite_food %>
+  Their favorite food is <a href="/foods/<%= @student.food.id %>"><%= @student.food.name %></a>
 </p>
 
 <a href="/students/<%= @student.id %>/edit">Edit <%= @student.name %></a>

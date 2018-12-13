@@ -1,0 +1,11 @@
+<h1>This is the <%= @food.name %> Page</h1>
+
+<h3>Here are all of the students who love <%= @food.name %>s</h3>
+
+<ul>
+<% @food.students.each do |student| %>
+  <li>
+    <a href="/students/<%= student.id %>"><%= student.name %></a>
+  </li>
+<% end %>
+</ul>
