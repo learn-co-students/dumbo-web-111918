@@ -1,0 +1,17 @@
+<h2>This is information regarding <%= @student.name %></h2>
+<p>
+  Their favorite pokemon is <%= @student.pokemon%>
+</p>
+<p>
+  Their age is <%= @student.age %>
+</p>
+<p>
+  Their favorite food is <%= @student.favorite_food %>
+</p>
+
+<a href="/students/<%= @student.id %>/edit">Edit <%= @student.name %></a>
+
+<form action="/students/<%= @student.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete <%= @student.name %>">
+</form>

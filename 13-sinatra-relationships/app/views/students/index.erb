@@ -1,0 +1,17 @@
+<a href="students/new">Create a new student!</a>
+<h1>This is the list of students</h1>
+<!-- Write Ruby -->
+<!-- Generally enumerable -->
+<ul>
+
+  <% @students.each do |student| %>
+    <li>
+      <!-- Show information -->
+      <a href="students/<%= student.id %>">
+      <%= "#{student.name} is cool" %>
+      </a>
+    </li>
+
+  <% end %>
+
+</ul>
