@@ -13,9 +13,13 @@ class TrainsController < ApplicationController
   end
 
   def create
-    @train = Train.create(train_params)
-    
-    redirect_to @train
+    @train = Train.new(train_params)
+    if @train.save
+      redirect_to @train
+    else
+      flash[:chicken] = @train.errors.full_messages
+      render :new
+    end
   end
 
   def edit

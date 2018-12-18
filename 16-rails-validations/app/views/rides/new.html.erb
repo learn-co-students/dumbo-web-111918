@@ -1,0 +1,14 @@
+<%= form_for @ride do |f| %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.label :passenger %>
+  <%= f.collection_select :passenger_id, @passengers, :id, :name %>
+  <%= f.label :train %>
+  <%= f.collection_select :train_id, @trains, :id, :line %>
+  <%= f.submit %>
+  <%# First argument is an attribute of the form_for  %>
+  <%# Second argument is what we're iterating over  %>
+  <%# Third argument is the value of each select  %>
+  <%# Fourth argument is what gets displayed %>
+
+<% end %>

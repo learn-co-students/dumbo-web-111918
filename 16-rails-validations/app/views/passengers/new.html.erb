@@ -1,2 +1,14 @@
 <h2>New Passenger Form</h2>
+<%# If there are errors, this block will render them  %>
+<% if flash[:errors] %>
+<h2>Here are some errors you made!</h2>
+  <ul>
+    <% flash[:errors].each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= render "form" %>

@@ -1,3 +1,5 @@
 class Train < ApplicationRecord
-  has_many :passengers, dependent: :destroy
+  has_many :rides
+  has_many :passengers, through: :rides
+  validates :line, uniqueness: true, presence: true
 end

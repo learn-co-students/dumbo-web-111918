@@ -14,8 +14,16 @@ class PassengersController < ApplicationController
   end
 
   def create
-    @passenger = Passenger.create(passenger_params)
-    redirect_to @passenger
+    @passenger = Passenger.new(passenger_params)
+    byebug
+    if @passenger.valid?
+      @passenger.save
+      redirect_to @passenger
+    else
+      #flash is a hash
+      flash[:errors] = @passenger.errors.full_messages
+      render :new
+    end
   end
 
   def edit

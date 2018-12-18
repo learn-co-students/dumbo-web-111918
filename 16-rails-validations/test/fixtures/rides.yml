@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1
+  train: one
+  passenger: one
+
+two:
+  rating: 1
+  train: two
+  passenger: two

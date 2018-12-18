@@ -1,2 +1,6 @@
 <h1>Hi I'm passenger <%= @passenger.name %></h1>
-<h3>I ride the <%= link_to @passenger.train.line, @passenger.train %> Line.</h3>
+<% @passenger.rides.each do |ride| %>
+  <li>I rode <%= ride.train.line %> and gave it a rating of <%= ride.rating %>
+
+  </li>
+<% end %>
