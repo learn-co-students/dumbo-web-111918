@@ -1,0 +1,8 @@
+<h1>All the MTA Trains</h1>
+<ul>
+  <% @trains.each do |train| %>
+    <li>
+      <%= link_to "#{train.line} Line", train %>
+    </li>
+  <% end %>
+</ul>

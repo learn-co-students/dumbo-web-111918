@@ -1,0 +1,12 @@
+<h1>I'm the <%= @train.line %> Line</h1>
+
+<h3>Here are my passengers</h3>
+<ul>
+  <% @train.passengers.each do |passenger| %>
+    <li>
+        <%= link_to passenger.name, "/passengers/#{passenger.id}" %>
+    </li>
+  <% end %>
+</ul>
+
+<%= button_to "Delete #{@train.line}", train_path(@train), method: :delete  %>
