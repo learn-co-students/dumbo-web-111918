@@ -1,6 +1,10 @@
 class PassengersController < ApplicationController
   before_action :find_trains, only: [:new, :edit]
 
+  def index
+    @passengers = Passenger.all
+  end
+
   def show
     @passenger = Passenger.find(params[:id])
   end
@@ -10,7 +14,6 @@ class PassengersController < ApplicationController
   end
 
   def create
-    byebug
     @passenger = Passenger.create(passenger_params)
     redirect_to @passenger
   end

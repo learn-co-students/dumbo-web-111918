@@ -1,9 +1,2 @@
-<%= form_for @passenger do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-
-<%= f.label :train_id %>
-<%= f.collection_select :train_id, @trains, :id, :line %>
-
-<%= f.submit %>
-<% end %>
+<h2>New Passenger Form</h2>
+<%= render "form" %>
