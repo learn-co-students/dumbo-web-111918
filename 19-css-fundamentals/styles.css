@@ -1,0 +1,73 @@
+/********************** SITE-WIDE STYLES **********************/
+p {
+  font-size: 20px;
+}
+
+body {
+  text-align: center;
+  background-color: thistle;
+}
+/********************** HOME PAGE **********************/
+
+.header {
+  height: 400px;
+  background-image: url(./images/header_img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#main-page-title {
+  font-family: sans-serif;
+  color: white;
+  font-size: 100px;
+}
+
+.intro {
+  padding: 20px;
+  border: 5px solid black;
+  margin: 100px;
+  background-color: thistle;
+}
+
+
+button {
+  padding: 20px;
+}
+
+div.featuredPark button > a {
+  color: black;
+  font-size: 25px;
+}
+
+/********************** ARTICLE **********************/
+
+
+.grand-canyon-image {
+  width: 400px;
+  float: left;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border: 5px solid black;
+
+}
+
+.park-info {
+  clear: both;
+}
+
+/********************** IMAGE GALLERY **********************/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery-img {
+  width: 100%;
+}
