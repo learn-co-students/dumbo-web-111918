@@ -1,4 +1,4 @@
-#CSS Fundamentals
+# CSS Fundamentals
 
 ## Objectives
   + Discuss what CSS does and why it is important
@@ -41,13 +41,13 @@ Bootstrap
 
 ## Resources
 
-https://www.awwwards.com/
-https://www.epicurrence.com/
-https://flukeout.github.io/
-https://flexboxfroggy.com/
-http://cssgridgarden.com/
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-https://css-tricks.com/snippets/css/complete-guide-grid/
-https://tympanus.net/codrops/css_reference/
-https://getbootstrap.com/
-https://semantic-ui.com/
+- https://www.awwwards.com/
+- https://www.epicurrence.com/
+- https://flukeout.github.io/
+- https://flexboxfroggy.com/
+- http://cssgridgarden.com/
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- https://css-tricks.com/snippets/css/complete-guide-grid/
+- https://tympanus.net/codrops/css_reference/
+- https://getbootstrap.com/
+- https://semantic-ui.com/
