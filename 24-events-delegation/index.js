@@ -1,44 +1,61 @@
-function deleteElement(event){
-  removeSound();
-  event.target.remove()
-}
-// function bindEventListenerToItem(singleItem, index, fullArray){ // not using these other two 🤔
-//   console.log(index)
-//   singleItem.addEventListener("click", deleteElement)
-// }
 
-let itemsUl;
 
-function addEmojiToList(){
-  addSound();
-  // document.querySelector(".items")
-  const domNode = document.createElement("li")
-  domNode.className = "item";
-  domNode.innerText = "🌮"
-  // domNode.addEventListener("click", deleteElement)
-  itemsUl.prepend(domNode);
+function itemClickHandler(event){
+  let thingWeClickedOn = event.target;
+  thingWeClickedOn.remove()
 }
-function dclCallback(){
-  itemsUl = document.querySelector(".items")
-  document.querySelector("body").addEventListener("click", function(event){
-    console.log("body got clicked, event.target is: ", event.target)
+
+function tacoClick(){
+  // find (query select the items ul)
+  let itemsUl = document.querySelector(".items")
+
+  // createNode li 
+  let li = document.createElement("li")
+
+      // innerText of that li
+      // to be a taco emoji
+
+
+    // append child to the list (ul)
+    itemsUl.append(li)
+}
+
+// console.log("1st hello from LINE 8")
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  // console.log("3rd dcl")
+  // let firstItem = document.querySelector(".items li")
+  // firstItem.addEventListener("click", itemClickHandler)
+
+  let allTheItems = document.querySelectorAll(".items li");
+  allTheItems.forEach(function(item){
+    item.addEventListener("click", itemClickHandler)
   })
-  itemsUl.addEventListener("click", function(event){
-    console.log("ul got clicked")
-    if (event.target.className === "item"){ // clicked on an li and it bubbled up to the UL
-      console.log("...because the li originally got clicked")
-      deleteElement(event)
-    } 
-    else {
-      // it's a click directly to the UL probably
-    }
-  })
-  document.getElementById("taco").addEventListener("click", addEmojiToList);
-  // document.querySelectorAll(".item").forEach(bindEventListenerToItem);
-}
-document.addEventListener("DOMContentLoaded", dclCallback)
+  // allTheItems.addEventListener("click", itemClickHandler);
+
+  document.querySelector("#taco").addEventListener("click", tacoClick)
+});
+
+// console.log("2nd hello from LINE 16")
 
 
 
+// document.addEventListener("DOMContentLoaded", function(){
+//   let taco = document.querySelector("#taco")
 
-// items
+//   function callback(){
+//     console.log("HELLO")
+//   }
+
+//   taco.addEventListener("click", callback)
+
+//   taco.addEventListener("click", function(){
+//     console.log("POATAO")
+//   })
+
+// })
+
+
+
