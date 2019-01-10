@@ -35,14 +35,14 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  background-color: #eee;
+  background-color: #ccc;
   border-radius: 85px;
   min-height: 170px;
 }
 .items li {
   padding: 25px 0;
   text-align: center;
-  background: #ddd;
+  background: #aaa;
   user-select: none;
   width: 150px;
   height: 150px;

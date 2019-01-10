@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <link rel="Stylesheet" href="pictures-style.css" />
+    <script src="background-setup.js"></script>
+    <script src="pictures.js"></script>
+  </head>
+  <body>
+    <h2>New color</h2>
+    <form id="new-color-form">
+      <ol>
+        <li>
+          <label for="color">Color</label>
+          <input id="color" name="color" type="text" />
+        </li>
+        <li>
+          <label for="x">Across</label>
+          <select id="x" name="x">
+            <option value="0">0</option>
+            <option value="100">1</option>
+            <option value="200">2</option>
+            <option value="300">3</option>
+            <option value="400">4</option>
+            <option value="500">5</option>
+            <option value="600">6</option>
+          </select>
+        </li>
+        <li>
+          <label for="y">Down</label>
+          <select id="y" name="y">
+            <option value="0">0</option>
+            <option value="100">1</option>
+            <option value="200">2</option>
+            <option value="300">3</option>
+            <option value="400">4</option>
+            <option value="500">5</option>
+            <option value="600">6</option>
+          </select>
+        </li>
+        <li>
+          <input type="submit" />
+        </li>
+      </ol>
+    </form>
+    <section class="art-container">
+      <ul class="art-background big-square">
+      </ul>
+      <ul id="art" class="big-square">
+      </ul>
+    </section>
+  </body>
+</html>
