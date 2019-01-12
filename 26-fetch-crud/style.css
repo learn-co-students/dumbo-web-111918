@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  min-height: 100%;
+  margin: 0;
+}
+.sidebar {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 10px #00000022;
+}
+.detail {
+  padding: 20px;
+  flex-grow: 1;
+}
+.movie {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+.movie:hover {
+  background: #eee
+}
+.movie.selected {
+  background: #55f;
+  color: white;
+}
+.loading {
+  background: #aaa;
+  animation: throb .5s infinite alternate;
+}
+@keyframes throb {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1, h2 {
+  margin-top: 0;
+}
+.add-movie {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 5px 10px #00000022;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  outline: none;
+  color: #55f;
+}
+.add-movie:hover {
+  background: #eee;
+}
+.add-movie:active {
+  background: #55f;
+  color: #fff;
+}
+button.danger {
+  color: red;
+}
+.movie-form > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+input[type=text] {
+  margin-bottom: 10px;
+}
+input[type=submit] {
+  margin-top: 10px;
+}
+.cast-inputs-container {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.cast-inputs {
+  margin-top: 10px;
+}

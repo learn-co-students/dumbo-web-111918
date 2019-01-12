@@ -1,0 +1,45 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Spice World",
+      "year": 1997,
+      "cast": [
+        "Scary Spice",
+        "Ginger Spice",
+        "Baby Spice",
+        "Posh Spice",
+        "Sporty Spice",
+        "Meat Loaf",
+        "Alan Cumming"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Room",
+      "year": 2003,
+      "cast": [
+        "Tommy Wiseau",
+        "Greg Sestero",
+        "Juliette Danielle"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Battlefield Earth",
+      "year": 2000,
+      "cast": [
+        "John Travolta"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Twilight",
+      "year": 2008,
+      "cast": [
+        "Kristen Stewart",
+        "Robert Pattinson"
+      ]
+    }
+  ]
+}

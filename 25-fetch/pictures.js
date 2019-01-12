@@ -1,7 +1,8 @@
-let artId = 1
+let artId = 2;
+
 let list;
 
-function(pixel){
+function renderPixel(pixel){
   const li = document.createElement("li")
   li.style.background = pixel.color
   li.style.top = `${ pixel.y }px`
@@ -34,7 +35,7 @@ function formSubmit(e){
 
   const body = JSON.stringify(pixel);
 
-  fetch(`http://localhost:3001/pixels`, {
+  fetch(`http://localhost:3000/pixels`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
-fetch(`http://localhost:3001/pictures/${ artId }`)
+fetch(`http://localhost:3000/pictures/${ artId }`)
   .then(res => res.json())
   .then(data => dealWithPictureData(data))
 

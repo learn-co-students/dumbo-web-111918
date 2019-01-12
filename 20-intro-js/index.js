@@ -31,9 +31,10 @@ foo = {
   a: "BANANA"
 };
 
+//also arrays are objects
 [1,3,4,6,6];
 
-
+//and functions
 function free(){
 
 }
@@ -54,6 +55,8 @@ null
 
 // 7. Symbols
 
+
+//never mind for now
 
 
 
