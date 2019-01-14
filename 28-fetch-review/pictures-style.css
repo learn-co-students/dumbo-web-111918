@@ -37,3 +37,16 @@ ul {
 .bg-square:nth-child(even) {
   background: #f0f0f0;
 }
+#arts {
+  float: right;
+}
+#arts li {
+  display: inline;
+  padding: 10px;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 500px;
+}
+#arts li:hover {
+  background: pink;
+}

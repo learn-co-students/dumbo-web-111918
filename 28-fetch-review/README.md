@@ -1,0 +1,8 @@
+- 12 Full fetch CRUD
+- 6 fetching with POST and PATCH
+- 5 How to handle data recieved from a fetch and pull it out of a promis
+- 2 Using debugger
+- 1 Using dataset to get id's
+- 1 event listeners & delegation
+- 1 DOM manipulation
+- 1 optimistic vs. pessimistic rendering
