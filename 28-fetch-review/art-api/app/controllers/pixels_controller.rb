@@ -11,6 +11,16 @@ class PixelsController < ApplicationController
     end
   end
 
+
+  def update
+    @pixel = Pixel.find(params[:id])
+    if @pixel.update(pixel_params)
+      render json: @pixel
+    else
+      render json: {}, status: 422
+    end
+  end
+
   def destroy
     Pixel.delete(params[:id])
   end

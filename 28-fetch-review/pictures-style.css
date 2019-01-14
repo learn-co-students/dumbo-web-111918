@@ -21,6 +21,7 @@ ul {
   height: 100px;
   mix-blend-mode: multiply;
   background: pink;
+  transition: background-color 1s, top 1s, left 1s;
 }
 .art-background {
   display: flex;
@@ -50,3 +51,28 @@ ul {
 #arts li:hover {
   background: pink;
 }
+
+
+#new-color-form input,
+#new-color-form select {
+  font-size: 36px;
+}
+
+#new-color-form {
+  font-size: 36px;
+  padding: 20px;
+  z-index: 90000;
+  background: white;
+  display: none;
+  position: fixed;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 0 0 100px #00000099;
+}
+
+
+
+
+
+
+
