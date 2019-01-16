@@ -1,0 +1,8 @@
+- Review first-class functions
+- Closures
+- Higher-order functions
+  - Review callbacks
+  - Functions that return functions
+- Functional programming paradigms
+- How to use functional paradigms in a DOM world
+- IIFE's
