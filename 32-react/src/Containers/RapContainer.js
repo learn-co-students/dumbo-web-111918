@@ -16,9 +16,7 @@ class RapContainer extends Component {
   //   this.submitHandler = this.submitHandler.bind(this);
   // }
 
-  submitHandler = (e, rapperObj) => {
-    e.preventDefault();
-    console.log("submitted", rapperObj);
+  submitHandler = rapperObj => {
     let newRappers = [rapperObj, ...this.state.rappers];
     this.setState({
       rappers: newRappers
