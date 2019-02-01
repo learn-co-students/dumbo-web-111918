@@ -1,4 +1,5 @@
-## React State && Forms
+## React Component Lifecycles
 
-- Controlled vs Uncontrolled Forms
-- Search functionality to demonstrate state in form vs in parent
+- componentDidMount()
+- componentDidUpdate()
+- componentWillUnmount()

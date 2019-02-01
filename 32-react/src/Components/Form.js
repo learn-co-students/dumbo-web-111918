@@ -9,7 +9,6 @@ export default class Form extends Component {
   };
 
   changeHandler = e => {
-    console.log("on change", e.target.value);
     let obj = {
       [e.target.name]: e.target.value
     };
