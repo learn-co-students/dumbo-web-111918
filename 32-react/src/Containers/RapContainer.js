@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import RapCard from "../Components/RapCard";
 import Form from "../Components/Form";
 import SearchForm from "../Components/SearchForm";
@@ -19,7 +20,6 @@ class RapContainer extends Component {
   // }
 
   componentDidMount() {
-    console.log("Rap Container Did Mount");
     fetch("http://localhost:3000/rapperList")
       .then(resp => resp.json())
       .then(rappers =>
@@ -55,6 +55,13 @@ class RapContainer extends Component {
   //     rapper.name.toLowerCase().includes(term)
   //   );
   // };
+
+  doThisStuff = routerProps => {
+    let name = routerProps.match.params.name;
+    let rapper = this.state.rappers.find(rapperObj => rapperObj.name === name);
+    return <RapCard rapper={rapper} />;
+  };
+
   render() {
     console.log("Rap Container", this.state);
     let rapList = this.state.filteredRappers.map(rapperObj => (
@@ -63,22 +70,41 @@ class RapContainer extends Component {
 
     return (
       <div>
-        {this.state.rappers.length > 0 ? (
-          <div>
-            <Form submitHandler={this.submitHandler} />
-            <br />
-            <SearchForm
-              changeHandler={this.changeHandler}
-              value={this.state.searchTerm}
-            />
-            {rapList}
-          </div>
-        ) : (
-          <h1>Loading</h1>
-        )}
+        <Switch>
+          <Route
+            path="/rappers/:name"
+            render={routerProps => (
+              <div>
+                {this.state.rappers.length > 0
+                  ? this.doThisStuff(routerProps)
+                  : null}
+              </div>
+            )}
+          />
+          <Route
+            path="/rappers"
+            render={() => {
+              return <div>{rapList}</div>;
+            }}
+          />
+        </Switch>
       </div>
     );
   }
 }
 
 export default RapContainer;
+
+// <Form submitHandler={this.submitHandler} />
+// <br />
+// <SearchForm
+//   changeHandler={this.changeHandler}
+//   value={this.state.searchTerm}
+// />
+
+// <Route
+//   path="/rappers/:name"
+//   render={routerProps => {
+//      <div>{this.state.rappers.length > 0 ? (this.doThisStuff(routerProps)):(<h1>Loading</h1>)}</div>
+//     }
+// />
