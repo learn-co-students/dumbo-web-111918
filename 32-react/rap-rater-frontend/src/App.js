@@ -23,7 +23,9 @@ class App extends Component {
         }
       })
         .then(resp => resp.json())
-        .then(data => this.setState({ user: data.user }));
+        .then(data =>
+          data.error ? alert(`Must Log In`) : this.setState({ user: data.user })
+        );
     } else {
       this.props.history.push("/login");
     }
@@ -41,10 +43,9 @@ class App extends Component {
       body: JSON.stringify({ user: { username: username, password: password } })
     })
       .then(resp => resp.json())
-      .then(data => {
-        localStorage.setItem("token", data.jwt);
-        this.setState({ user: data.user });
-      });
+      .then(data =>
+        data.error ? alert(`${data.error}`) : this.setState({ user: data.user })
+      );
   };
 
   loginUser = userObj => {
@@ -60,8 +61,13 @@ class App extends Component {
     })
       .then(resp => resp.json())
       .then(data => {
-        localStorage.setItem("token", data.jwt);
-        this.setState({ user: data.user });
+        if (data.message) {
+          alert(`${data.message}`);
+        } else {
+          this.setState({ user: data.user }, () =>
+            this.props.history.push("/rappers")
+          );
+        }
       });
   };
 
@@ -69,10 +75,22 @@ class App extends Component {
     return Object.keys(this.state.user).length > 0;
   };
 
+  logout = () => {
+    localStorage.removeItem("token");
+    this.setState({
+      user: {}
+    });
+    this.props.history.push("/login");
+  };
+
   render() {
     return (
       <div>
-        {this.isThereAUser() ? <Navbar user={this.state.user} /> : <Navbar />}
+        {this.isThereAUser() ? (
+          <Navbar user={this.state.user} logout={this.logout} />
+        ) : (
+          <Navbar />
+        )}
         <Switch>
           <Route
             path="/rappers"

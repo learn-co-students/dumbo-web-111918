@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class RapCard extends React.Component {
   state = {
@@ -21,7 +22,9 @@ class RapCard extends React.Component {
     return (
       <div>
         <h2>{this.props.rapper.name}</h2>
-        <img alt="" src={this.renderOrNah()} />
+        <Link to={`/rappers/${this.props.rapper.name}`}>
+          <img alt="" src={this.renderOrNah()} />
+        </Link>
         <button onClick={this.clickHandler}>Flip Pic</button>
       </div>
     );

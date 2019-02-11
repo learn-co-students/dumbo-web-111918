@@ -19,8 +19,7 @@ const Navbar = props => {
       {props.user ? (
         <li
           onClick={() => {
-            localStorage.removeItem("token");
-            props.history.push("/login");
+            props.logout();
           }}
         >
           Log Out

@@ -63,7 +63,6 @@ class RapContainer extends Component {
   };
 
   render() {
-    console.log("Rap Container", this.state);
     let rapList = this.state.filteredRappers.map(rapperObj => (
       <RapCard key={rapperObj.name} rapper={rapperObj} />
     ));
