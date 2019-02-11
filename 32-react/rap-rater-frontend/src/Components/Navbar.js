@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 const Navbar = props => {
   return (
     <ul>
-      <Link to="/">
+      <Link to="/home">
         <li>Home</li>
       </Link>
       <Link to="/rappers">

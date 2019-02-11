@@ -70,7 +70,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("app", Object.keys(this.state.user));
     return (
       <div>
         {this.isThereAUser() ? <Navbar user={this.state.user} /> : <Navbar />}
@@ -83,13 +82,22 @@ class App extends Component {
                   {this.isThereAUser() ? (
                     <RapContainer user={this.state.user} />
                   ) : (
-                    <RapContainer />
+                    <Redirect to="/login" />
                   )}
                 </div>
               );
             }}
           />
-          <Route path="/home" component={Home} />
+          <Route
+            path="/home"
+            render={() => {
+              return (
+                <div>
+                  {this.isThereAUser() ? <Home /> : <Redirect to="/login" />}
+                </div>
+              );
+            }}
+          />
           <Route
             path="/signup"
             render={() => <Signup submitHandler={this.createUser} />}
@@ -98,7 +106,6 @@ class App extends Component {
             path="/login"
             render={() => <Login submitHandler={this.loginUser} />}
           />
-          <Redirect from="*" to="/" />
         </Switch>
       </div>
     );

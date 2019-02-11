@@ -70,28 +70,24 @@ class RapContainer extends Component {
 
     return (
       <div>
-        {this.props.user ? (
-          <Switch>
-            <Route
-              path="/rappers/:name"
-              render={routerProps => (
-                <div>
-                  {this.state.rappers.length > 0
-                    ? this.doThisStuff(routerProps)
-                    : null}
-                </div>
-              )}
-            />
-            <Route
-              path="/rappers"
-              render={() => {
-                return <div>{rapList}</div>;
-              }}
-            />
-          </Switch>
-        ) : (
-          <Redirect to="/login" />
-        )}
+        <Switch>
+          <Route
+            path="/rappers/:name"
+            render={routerProps => (
+              <div>
+                {this.state.rappers.length > 0
+                  ? this.doThisStuff(routerProps)
+                  : null}
+              </div>
+            )}
+          />
+          <Route
+            path="/rappers"
+            render={() => {
+              return <div>{rapList}</div>;
+            }}
+          />
+        </Switch>
       </div>
     );
   }
