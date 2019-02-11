@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import RapCard from "../Components/RapCard";
 import Form from "../Components/Form";
 import SearchForm from "../Components/SearchForm";
@@ -20,7 +20,7 @@ class RapContainer extends Component {
   // }
 
   componentDidMount() {
-    fetch("http://localhost:3000/rapperList")
+    fetch("http://localhost:3004/rapperList")
       .then(resp => resp.json())
       .then(rappers =>
         this.setState({
@@ -70,24 +70,28 @@ class RapContainer extends Component {
 
     return (
       <div>
-        <Switch>
-          <Route
-            path="/rappers/:name"
-            render={routerProps => (
-              <div>
-                {this.state.rappers.length > 0
-                  ? this.doThisStuff(routerProps)
-                  : null}
-              </div>
-            )}
-          />
-          <Route
-            path="/rappers"
-            render={() => {
-              return <div>{rapList}</div>;
-            }}
-          />
-        </Switch>
+        {this.props.user ? (
+          <Switch>
+            <Route
+              path="/rappers/:name"
+              render={routerProps => (
+                <div>
+                  {this.state.rappers.length > 0
+                    ? this.doThisStuff(routerProps)
+                    : null}
+                </div>
+              )}
+            />
+            <Route
+              path="/rappers"
+              render={() => {
+                return <div>{rapList}</div>;
+              }}
+            />
+          </Switch>
+        ) : (
+          <Redirect to="/login" />
+        )}
       </div>
     );
   }

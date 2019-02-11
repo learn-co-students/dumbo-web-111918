@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = props => {
   return (
     <ul>
       <Link to="/">
@@ -10,9 +10,24 @@ const Navbar = () => {
       <Link to="/rappers">
         <li>Rappers</li>
       </Link>
-      <li>Log In</li>
+      <Link to="/login">
+        <li>Log In</li>
+      </Link>
+      <Link to="/signup">
+        <li>Sign Up</li>
+      </Link>
+      {props.user ? (
+        <li
+          onClick={() => {
+            localStorage.removeItem("token");
+            props.history.push("/login");
+          }}
+        >
+          Log Out
+        </li>
+      ) : null}
     </ul>
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);
