@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 100px;
+}
+
+.App-header {
+  background-color: #F396D1 ;
+  height: 200px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card {
+  background-color: #222;
+
+  height: 380px;
+  width: 200px;
+  padding: 20px;
+  color: white;
+  margin: auto;
+}
+
+button {
+  background-color: #C92C90;
+  color: white;
+  font-family: 'Righteous', cursive;
+}
+
+.container {
+  display: flex;
+  margin: 20px 0 100px 0;
+}
+
+.small-img {
+  height: 40px;
+}
+
+.inline {
+  display: inline
+}
+
+
+h1 {
+  font-family: 'Barrio', cursive;
+  font-size: 40px;
+  color: #FF0074;
+}
+
+h2 {
+  font-family: 'Jim Nightshade', cursive;
+  color: #FF0074
+}
+
+body {
+  font-family: 'Averia Serif Libre', cursive;
+  background-image: url("https://media.istockphoto.com/photos/pink-wood-texture-picture-id521229826?k=6&m=521229826&s=612x612&w=0&h=eALLZP2tFI_2PU-E1uvTaBuwXYHZVvlQulGUrvBBuNs=");
+}
+
+img, img.scale-with-grid { outline: 0; max-width: 100%; height: 200px; }
