@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
+import {addWizard} from '../redux/actions'
 
 class WizardForm extends Component {
 
+  state = {
+    name: "",
+    house: "",
+    redux: "",
+  }
 
   handleChange = (e) => {
-      console.log(e.target.name, e.target.value)
+    this.setState({
+      [e.target.name] : e.target.value
+    })
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Submitted!");
+    const wizard = this.state
+    this.props.addWizard(wizard)
   }
 
   render() {
@@ -18,15 +28,15 @@ class WizardForm extends Component {
         <label>
           Name
         </label>
-          <input type="text" name="name" onChange={this.handleChange}/>
+          <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
         <label>
           House
         </label>
-          <input type="text" name="house" onChange={this.handleChange}/>
+          <input type="text" name="house" onChange={this.handleChange} value={this.state.house}/>
         <label>
           Redux
         </label>
-          <input type="text" name="redux" onChange={this.handleChange}/>
+          <input type="text" name="redux" onChange={this.handleChange} value={this.state.redux}/>
         <input type="submit"/>
       </form>
     );
@@ -34,6 +44,21 @@ class WizardForm extends Component {
 
 }
 
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     addWizard: (wizardObject) => {dispatch({type: "ADD_WIZARD", payload: wizardObject})}
+//   }
+// }
 
 
-export default WizardForm;
+
+
+
+
+
+// First argument of connect is to "Get" information
+// Second argument of connect is to "Set" information
+
+const someFunc = connect(null, { addWizard })
+const someComponent = someFunc(WizardForm)
+export default someComponent
