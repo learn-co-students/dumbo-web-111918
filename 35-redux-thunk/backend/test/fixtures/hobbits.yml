@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  title: MyString
+  field: MyString
+  seniority: MyString
+  position: MyString
+  key_skill: MyString
+  employement_type: MyString
+
+two:
+  name: MyString
+  title: MyString
+  field: MyString
+  seniority: MyString
+  position: MyString
+  key_skill: MyString
+  employement_type: MyString

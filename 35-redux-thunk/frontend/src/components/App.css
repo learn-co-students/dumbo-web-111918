@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  font-size: 34px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hobbitsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.card {
+  padding: 1em;
+  border: solid black 3px;
+  margin: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+form {
+  border: dotted black 5px
+}
+
+label {
+  margin: 10px;
+}
