@@ -1,6 +1,6 @@
 ## React Router
 
-##Setting up
+Setting up:
 
 - react-router-dom
 - npm install --save react-router-dom
